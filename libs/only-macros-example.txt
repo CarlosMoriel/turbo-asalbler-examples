@@ -1,0 +1,30 @@
+ 
+mLimpia macro
+    mov ah,0fh
+    int 10h
+    mov ah,0
+    int 10h
+endm
+
+mPausa macro
+    mov ah,7
+    int 21h
+endm
+
+mImprimirC macro param
+    lea dx,param
+    mov ah,9
+    int 21h
+endm
+
+mPosrc macro param1,param2
+    mov bh,0
+    mov dh,param1
+    mov dl,param2
+    mov ah,2
+    int 10h
+endm
+ 
+
+
+
